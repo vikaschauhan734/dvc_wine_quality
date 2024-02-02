@@ -33,3 +33,8 @@ git branch -M main
 ```cmd
 git push -u origin main
 ```
+
+For staging data:
+```cmd
+dvc repro
+```
