@@ -1,5 +1,12 @@
+# local package install
+-e .
+
+# thirs party packages
 dvc
 dvc[gdrive]
 scikit-learn
 pandas
 numpy
+pytest
+tox
+wheel

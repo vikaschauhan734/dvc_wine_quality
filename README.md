@@ -39,6 +39,10 @@ For staging data:
 dvc repro
 ```
 
+```cmd
+mkdir report
+```
+
 For metrics check:
 ```cmd
 dvc metrics show
@@ -48,3 +52,39 @@ For comparing new metrics with old metrics:
 ```cmd
 dvc metrics diff
 ```
+
+```cmd
+mkdir tests
+```
+
+```cmd
+touch tests/conftest.py tests/test_config.py tests/__init__.py
+```
+
+pytest command:
+```cmd
+pytest -v
+```
+
+```cmd
+tox
+```
+
+For rebuilding the environment:
+```cmd
+tox -r
+```
+
+
+Setup commands:
+For installing src package:
+```cmd
+pip install -e .
+```
+
+Build your own package commands:
+```cmd
+pip install wheel
+python setup.py sdist bdist_wheel
+```
+
