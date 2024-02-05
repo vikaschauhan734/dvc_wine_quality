@@ -38,3 +38,13 @@ For staging data:
 ```cmd
 dvc repro
 ```
+
+For metrics check:
+```cmd
+dvc metrics show
+```
+
+For comparing new metrics with old metrics:
+```cmd
+dvc metrics diff
+```
