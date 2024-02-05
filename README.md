@@ -88,3 +88,34 @@ pip install wheel
 python setup.py sdist bdist_wheel
 ```
 
+```cmd
+mkdir -p prediction_service/model
+```
+
+```cmd
+mkdir webapp
+```
+
+```cmd
+touch app.py
+```
+
+```cmd
+touch prediction_service/__init__.py
+touch prediction_service/prediction.py
+```
+
+```cmd
+mkdir -p webapp/static/css
+mkdir webapp/templates
+mkdir -p webapp/static/script
+```
+
+```cmd
+touch webapp/static/css/main.css
+touch webapp/static/script/index.json
+touch webapp/templates/index.html
+touch webapp/templates/404.html
+touch webapp/templates/base.html
+```
+
