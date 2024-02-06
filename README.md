@@ -119,3 +119,7 @@ touch webapp/templates/404.html
 touch webapp/templates/base.html
 ```
 
+Github Actions:
+```cmd
+touch .github/workflows/ci-cd.yaml
+```
