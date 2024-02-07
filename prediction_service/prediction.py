@@ -1,7 +1,7 @@
 import os
 import yaml
 import json
-import joblib
+import pickle
 import numpy as np
 
 params_path="params.yaml"
@@ -24,8 +24,9 @@ def read_params(config_path=params_path):
 
 def predict(data):
     config= read_params(params_path)
-    model_dir_path=config["webapp_model_dir"]
-    model = joblib.load(model_dir_path)
+    model_dir_path=config["model_dir"]
+    model_dir_path=os.path.join(model_dir_path,"model.pkl")
+    model = pickle.load(open(model_dir_path, 'rb'))
     prediction = model.predict(data).tolist()[0]
 
     try:
@@ -50,7 +51,7 @@ def validate_input(dict_request):
 
     def _validate_values(col, val):
         schema = get_schema()
-        if not (schema_path[col]['min']<=float(dict_request[col])<=schema_path[col]['max']):
+        if not (schema[col]['min']<=float(dict_request[col])<=schema[col]['max']):
             raise NotInRange
 
     for col, val in dict_request.items():
