@@ -123,3 +123,15 @@ Github Actions:
 ```cmd
 touch .github/workflows/ci-cd.yaml
 ```
+
+create an artifacts folder
+```cmd
+mkdir artifacts
+```
+
+mlflow server command:
+```cmd
+mlflow server \
+    --backend-store-uri sqlite://mlflow.db \
+    --default-artifact-root ./artifacts \
+    --host 0.0.0.0 -p 1234
