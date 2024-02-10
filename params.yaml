@@ -29,7 +29,7 @@ reports:
 
 webapp_model_dir: prediction_service/model/model.pkl
 
-mlflow config:
+mlflow_config:
   artifacts_dir: artifacts
   experiment_name: ElasticNet regression
   run_name: mlops
